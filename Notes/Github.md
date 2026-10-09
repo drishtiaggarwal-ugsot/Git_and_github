@@ -337,3 +337,24 @@ git status
 > Your explanation here...
 
 <!-- Add new sections below this line -->
+
+### How I set up SSH on Windows (by @DevdattaRane)
+
+To set up SSH on Windows, you must first install the OpenSSH components, which are available as optional features in Windows 10 and Windows 11.
+
+Installation and Configuration Steps
+
+1.Install OpenSSH: Open PowerShell as Administrator and run the following commands to install both the client and server:
+
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+2.Start the Service: Enable the SSH server service and set it to start automatically:
+
+Start-Service sshd
+Set-Service -Name sshd -StartupType Automatic
+
+3.Configure Firewall: Ensure the firewall allows inbound SSH traffic on port 22:
+
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH SSH Server' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+

@@ -390,9 +390,13 @@ git rm --cached <file>
 
 ## 15. Student Contributions
 
-> Add your own notes below! Keep them under a heading with your topic. Example:
->
-> ### git stash explained (by @your-username)
-> Your explanation here...
+git cherry-pick explained (by @AtharvVhanalkar)
+Ever needed just *one* specific commit from another branch without merging the whole thing? That's what `git cherry-pick` does!
 
-<!-- Add new sections below this line -->
+Instead of merging an entire branch, you can grab a single commit using its hash and apply it directly to your current branch:
+```bash
+# Switch to the branch where you want the commit
+git switch main
+
+# Pull in a specific commit from another branch
+git cherry-pick <commit-hash>

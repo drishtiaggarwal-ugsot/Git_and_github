@@ -330,10 +330,14 @@ git status
 ---
 
 ## 15. Student Contributions
+### Publishing a Live Website with GitHub Pages (by @AtharvVhanalkar)
 
-> Add your own notes below! Keep them under a heading with your topic. Example:
->
-> ### How I set up SSH on Windows (by @your-username)
-> Your explanation here...
+Want to show off your project to the world without paying for hosting? **GitHub Pages** turns any repository into a live website instantly for free!
 
-<!-- Add new sections below this line -->
+**How to set it up:**
+1. Go to your repository on GitHub and click on the **Settings** tab.
+2. In the left sidebar, click on **Pages** (under the "Code and automation" section).
+3. Under **Build and deployment**, change the source from "Deploy from a branch" or leave it as needed.
+4. Select your branch (usually `main`) and the folder (usually `/ (root)`), then click **Save**.
+
+Within a minute or two, GitHub will generate a live URL (e.g., `https://AtharvVhanalkar.github.io/repo-name/`) where anyone can view your HTML/CSS/JS project live in the browser!

@@ -396,3 +396,15 @@ git rm --cached <file>
 > Your explanation here...
 
 <!-- Add new sections below this line -->
+
+### Git STASH explained (by @DevdattaRane)
+
+Git stash temporarily shelves uncommitted changes in your working directory and index, allowing you to switch branches or perform other Git operations with a clean workspace without losing your progress.
+
+Stashing Work: Run git stash to save changes; use git stash -u to include untracked files or git stash -a to include ignored files.
+
+Stack Management: Stashes follow a Last-In, First-Out (LIFO) order, with the most recent stash at stash@{0}.
+
+Reapplying Changes: Use git stash apply to restore changes while keeping the stash in the stack, or git stash pop to apply and remove the top stash.
+
+ 
